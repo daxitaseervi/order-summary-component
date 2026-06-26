@@ -1,0 +1,195 @@
+:root {
+  --white: hsl(0, 0%, 100%);
+  --blue-100: hsl(225, 100%, 94%);
+  --blue-hover: hsl(245, 94%, 69%);
+  --blue-700: hsl(245, 75%, 52%);
+  --blue-50: hsl(225, 100%, 98%);
+  --gray-600: hsl(224, 23%, 55%);
+  --blue-950: hsl(223, 47%, 23%);
+
+  --paragraph-size: 16px;
+
+  --weight-regular: 500;
+  --weight-bold: 700;
+  --weight-black: 900;
+
+  --font-family: "Red Hat Display", Arial, sans-serif;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  font-family: var(--font-family);
+  background-color: var(--blue-100);
+  position: relative;
+}
+
+.bg__wave {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+
+main {
+  width: 370px;
+  min-width: 280px;
+  background-color: var(--white);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.card__hero-img {
+  width: 100%;
+}
+
+.card__content {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.card__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card__title,
+.card__desc {
+  text-align: center;
+  color: var(--blue-950);
+}
+
+.card__title {
+  font-weight: var(--weight-black);
+  font-size: 26px;
+}
+
+.card__desc {
+  padding-block-start: 15px;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.card__pricing {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--blue-50);
+  padding: 16px;
+  border-radius: 10px;
+}
+
+.card__price-info1 {
+  display: flex;
+}
+
+.card__pricing-icon {
+  width: 40px;
+  height: 40px;
+  margin-inline-end: 16px;
+}
+
+.card__plan-change {
+  font-size: 12px;
+  color: var(--blue-700);
+  font-weight: var(--weight-black);
+  text-decoration: underline;
+  cursor: pointer;
+  transition: color 0.25s;
+}
+
+.card__plan-change:hover {
+  color: var(--blue-hover);
+}
+
+.card__plan-label {
+  font-size: 14px;
+  font-weight: var(--weight-black);
+  color: var(--blue-950);
+  margin-block-end: 4px;
+}
+
+.card__plan-price {
+  font-size: 14px;
+  color: var(--gray-600);
+  font-weight: var(--weight-regular);
+}
+
+.card__proceed-btn {
+  width: 100%;
+  padding: 16px;
+  background-color: var(--blue-700);
+  color: var(--white);
+  border: none;
+  font-weight: var(--weight-bold);
+  border-radius: 10px;
+  box-shadow: 0 10px 10px rgba(56, 42, 225, 0.22);
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.card__proceed-btn:hover {
+  background-color: var(--blue-hover);
+}
+
+.card__cancel-btn {
+  justify-self: center;
+  color: var(--gray-600);
+  font-size: 14px;
+  font-weight: var(--weight-bold);
+  margin-block-start: 20px;
+  cursor: pointer;
+  transition: color 0.25s;
+}
+
+.card__cancel-btn:hover {
+  color: var(--blue-950);
+}
+
+@media (max-width: 400px) {
+  .bg__wave {
+      display: none;
+    }
+
+  .card__title {
+    font-size: 20px;
+  }
+
+  .card__desc {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .card__pricing-icon{
+    width: 36px;
+    height: 36px;
+  }
+
+  .card__plan-label{
+    font-size: 13px;
+    margin-block-end: 2px;
+  }
+
+  .card__plan-price {
+    font-size: 13px;
+  }
+}
+
