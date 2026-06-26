@@ -5,7 +5,7 @@ A responsive order summary card featuring a clean pricing section, interactive b
 This project gave me more practice with Flexbox, absolute positioning, and responsive layouts. I also learned how useful CSS custom properties are for keeping styles consistent and how important it is to pay attention to small details while debugging such as matching class names exactly, since CSS selectors are case-sensitive.
 
 ## Project
-- Live Site URL: 
+- Live Site URL: https://daxitaseervi.github.io/order-summary-component/
 ![Project Screenshot](images/project-screenshot.png)
 
 ## Links
